@@ -1,16 +1,22 @@
 language:
 - python
+
 python:
 - '3.6'
+
 install:
 - pip install -r requirements.txt
+
 script:
 - nosetests
+
 deploy:
   provider: heroku
   api_key:
     secure: KjajeXA8vQk73Fi6wJL+WZH/k0/mjD2aHov/MYzxRi8RSgcXtnxw3dubhrfQKN2if7HbV0o3OUub2ZVysMothkYwHfwrjBpQL8OYBL9Z3lG10EismRyox4jvd11MeHtf51AB62ETvDmvZG33TdbX86Rs258sJaPqWvyLoSYt6hONZRoQ4CoLWThlD7E0tZ2u+/sr2OcRovnjbVo4komE05yLCpZ7yq4qqaYoMg60V9fv0hTjNvws1htzKw69jfBmsNM2E4jQ3/a2cEPYHDhvZR4Z9thHe8+AS29+fmuf/g92Ky8BD4TecEwX01hk5hQTEQL0rjS/yV6FBOSo5ai6BiWxQis2EutiX6gk8X7gfy2APCFlw0vFGv/H8L+42o+uQxXvISZb1rPo5V3xJerXrD2+bkG74es8QKvqfJ4SbAuB9MIIgfN1doMXy2SV/0zyh28qfP1qqXS/r9whqwwXzHHUHXkfJnZw7Waswvmf6hURpHITWgYD0SMLBm/Agjgu6Fp3E6BjzkTf8q88mNfyqtg0KGg6NVnl6Cdl35VXC94eYmGKG+Sby6Wsc9u3u4utRO/g09QpMJhTiMj6KrgFn5lwteNrzIM6Jhj7HU5weasTk0+4bmBBpH2fUZEtLVJ71zoxZHe+h2Xnlm4dNEejVkCkMR95rS/jXkShaBZJXng=
   app: protected-harbor-65191
   on:
+    branch: master
+    python: '3.6'
     repo: MStopa/flasktaskr
   skip_cleanup: 'true'
